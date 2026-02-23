@@ -1,0 +1,53 @@
+SW1
+int ran f0/19 - 20
+sw tr en dot1q
+sw mo tr
+channel-gr 13 mo desirable
+int ran f0/23 - 24
+sw tr en dot1q
+sw mo tr
+channel-gr 12 mo desirable
+int ran f0/1 - 2
+sw mo acc 
+sw acc vl 100
+int f0/6
+sw mo acc
+sw acc vlan 60
+int lo0
+ip add 14.14.7.7 255.255.255.0
+int f0/3
+no sw
+ip add 14.14.13.17 255.255.255.0
+int vlan 120
+ip add 14.14.100.7 255.255.255.0
+int vlan 100
+ip add 14.14.12.7 255.255.255.0
+int vlan 200
+ip add 14.14.12.7 255.255.255.0
+===
+SW2
+int ran f0/19 - 20
+sw tr en dot1q
+sw mo tr
+channel-gr 24 mo desirable
+int ran f0/23 - 24
+sw tr en dot1q
+sw mo tr
+channel-gr 21 mo desirable
+int ran f0/1 - 2
+sw mo acc 
+sw acc vl 100
+int f0/6
+sw mo acc
+sw acc vlan 60
+int lo0
+ip add 14.14.7.7 255.255.255.0
+int f0/3
+no sw
+ip add 14.14.13.17 255.255.255.0
+int vlan 120
+ip add 14.14.100.7 255.255.255.0
+int vlan 100
+ip add 14.14.12.7 255.255.255.0
+int vlan 200
+ip add 14.14.12.7 255.255.255.0
